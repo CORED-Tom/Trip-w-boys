@@ -3,857 +3,773 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🇭🇰 홍콩+마카오 여행 🇲🇴</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<title>BUFB × HONG KONG + MACAU 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0a0f;
-    --card: #13131a;
-    --card-hover: #1a1a25;
-    --accent: #ff6b35;
-    --accent2: #ffd166;
-    --accent3: #06d6a0;
-    --text: #e8e6e3;
-    --text-dim: #8a8a9a;
-    --border: #2a2a3a;
-    --glass: rgba(255,255,255,0.04);
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+:root {
+  --bg: #06060b;
+  --card: #0f0f18;
+  --card2: #141420;
+  --gold: #d4a853;
+  --gold-dim: rgba(212,168,83,0.15);
+  --gold-border: rgba(212,168,83,0.25);
+  --red: #c0392b;
+  --green: #06d6a0;
+  --blue: #4ea8de;
+  --purple: #a078ff;
+  --text: #e8e6e3;
+  --text-dim: #6a6a7a;
+  --border: #1e1e30;
+  --glass: rgba(255,255,255,0.03);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
+::selection{background:var(--gold);color:var(--bg);}
 
-  /* Hero */
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 20% 80%, rgba(255,107,53,0.15), transparent),
-      radial-gradient(ellipse 50% 40% at 80% 20%, rgba(6,214,160,0.1), transparent),
-      radial-gradient(ellipse 40% 60% at 50% 50%, rgba(255,209,102,0.08), transparent);
-    z-index: 0;
-  }
-  .hero-content { position: relative; z-index: 1; }
-  .hero-flags {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 7vw, 5rem);
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-  }
-  .hero-sub {
-    font-size: 1.1rem;
-    color: var(--text-dim);
-    font-weight: 300;
-    margin-bottom: 2rem;
-  }
-  .hero-meta {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .hero-meta-item {
-    background: var(--glass);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 0.8rem 1.5rem;
-    backdrop-filter: blur(10px);
-  }
-  .hero-meta-item span { display: block; }
-  .hero-meta-item .label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; }
-  .hero-meta-item .value { font-size: 1rem; font-weight: 700; color: var(--accent2); }
-  .scroll-hint {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
-    color: var(--text-dim);
-    font-size: 0.85rem;
-  }
-  @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(8px); }
-  }
+/* ===== HERO ===== */
+.hero{
+  position:relative;min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;padding:2rem;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(212,168,83,0.06), transparent),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(192,57,43,0.05), transparent),
+    radial-gradient(ellipse 40% 40% at 80% 20%, rgba(212,168,83,0.04), transparent);
+}
+.hero-content{position:relative;z-index:1;}
+.hero-eyebrow{
+  font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.4em;
+  color:var(--gold);margin-bottom:0.5rem;
+  text-transform:uppercase;
+}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(4rem,12vw,9rem);
+  letter-spacing:0.05em;
+  line-height:0.9;
+  color:var(--text);
+  margin-bottom:0.3rem;
+}
+.hero h1 .gold{color:var(--gold);}
+.hero-sub{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(1rem,3vw,1.4rem);color:var(--text-dim);
+  margin-bottom:0.5rem;
+}
+.hero-tagline{
+  font-size:0.85rem;color:var(--text-dim);font-weight:300;
+  margin-bottom:2.5rem;letter-spacing:0.05em;
+}
+.hero-dates{
+  display:inline-flex;align-items:center;gap:1.5rem;
+  background:var(--glass);border:1px solid var(--border);
+  border-radius:100px;padding:0.8rem 2rem;
+  backdrop-filter:blur(10px);
+}
+.hero-dates .divider{width:1px;height:20px;background:var(--border);}
+.hero-dates span{font-size:0.85rem;font-weight:500;}
+.hero-dates .label{font-size:0.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.1em;}
+.scroll-cta{
+  position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);
+  font-size:0.75rem;color:var(--text-dim);letter-spacing:0.15em;text-transform:uppercase;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:0.4;}50%{opacity:1;}}
 
-  /* Day sections */
-  .day-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-  }
-  .day-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: linear-gradient(180deg, var(--bg) 60%, transparent);
-    padding: 1.5rem 0 2rem;
-  }
-  .day-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 1rem;
-    border-radius: 100px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.8rem;
-  }
-  .day-1 .day-badge { background: rgba(255,107,53,0.15); color: var(--accent); border: 1px solid rgba(255,107,53,0.3); }
-  .day-2 .day-badge { background: rgba(6,214,160,0.15); color: var(--accent3); border: 1px solid rgba(6,214,160,0.3); }
-  .day-3 .day-badge { background: rgba(255,209,102,0.15); color: var(--accent2); border: 1px solid rgba(255,209,102,0.3); }
-  .day-4 .day-badge { background: rgba(160,120,255,0.15); color: #a078ff; border: 1px solid rgba(160,120,255,0.3); }
-  .day-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-  }
-  .day-narrative {
-    color: var(--text-dim);
-    font-size: 0.9rem;
-    font-weight: 300;
-  }
+/* ===== CREW ===== */
+.section{max-width:840px;margin:0 auto;padding:3rem 1.5rem;}
+.section-label{
+  font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.3em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;
+}
+.section-title{
+  font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);
+  font-weight:700;margin-bottom:1.5rem;
+}
 
-  /* Timeline */
-  .timeline {
-    position: relative;
-    padding-left: 2rem;
-  }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--border), transparent);
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 1.5rem;
-    animation: fadeIn 0.5s ease forwards;
-    opacity: 0;
-  }
-  .timeline-item:nth-child(1) { animation-delay: 0.1s; }
-  .timeline-item:nth-child(2) { animation-delay: 0.2s; }
-  .timeline-item:nth-child(3) { animation-delay: 0.3s; }
-  .timeline-item:nth-child(4) { animation-delay: 0.4s; }
-  .timeline-item:nth-child(5) { animation-delay: 0.5s; }
-  .timeline-item:nth-child(6) { animation-delay: 0.6s; }
-  .timeline-item:nth-child(7) { animation-delay: 0.7s; }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .timeline-dot {
-    position: absolute;
-    left: -2rem;
-    top: 1.3rem;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 3px solid var(--accent);
-    background: var(--bg);
-    z-index: 1;
-  }
-  .day-2 .timeline-dot { border-color: var(--accent3); }
-  .day-3 .timeline-dot { border-color: var(--accent2); }
-  .day-4 .timeline-dot { border-color: #a078ff; }
+.crew-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;}
+.crew-card{
+  background:var(--card);border:1px solid var(--border);border-radius:16px;
+  padding:1.5rem;text-align:center;position:relative;overflow:hidden;
+  transition:all 0.3s;
+}
+.crew-card:hover{border-color:var(--gold-border);transform:translateY(-4px);}
+.crew-card.groom{border-color:var(--gold-border);background:linear-gradient(135deg,var(--card),rgba(212,168,83,0.05));}
+.crew-card.groom::after{
+  content:'👑';position:absolute;top:10px;right:12px;font-size:1.2rem;
+}
+.crew-emoji{font-size:2.5rem;margin-bottom:0.5rem;}
+.crew-name{font-weight:700;font-size:1.1rem;margin-bottom:0.2rem;}
+.crew-role{font-size:0.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.1em;}
+.crew-badge{
+  display:inline-block;margin-top:0.6rem;font-size:0.65rem;
+  padding:0.2rem 0.6rem;border-radius:100px;
+  background:var(--gold-dim);color:var(--gold);border:1px solid var(--gold-border);
+}
 
-  .spot-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.2rem 1.4rem;
-    transition: all 0.3s ease;
-    cursor: default;
-  }
-  .spot-card:hover {
-    background: var(--card-hover);
-    border-color: rgba(255,107,53,0.3);
-    transform: translateX(4px);
-  }
-  .day-2 .spot-card:hover { border-color: rgba(6,214,160,0.3); }
-  .day-3 .spot-card:hover { border-color: rgba(255,209,102,0.3); }
-  .day-4 .spot-card:hover { border-color: rgba(160,120,255,0.3); }
+/* ===== BACHELOR BANNER ===== */
+.bachelor-banner{
+  max-width:840px;margin:0 auto;padding:0 1.5rem;
+}
+.bachelor-inner{
+  background:linear-gradient(135deg,rgba(192,57,43,0.08),rgba(212,168,83,0.08));
+  border:1px solid rgba(212,168,83,0.2);border-radius:20px;
+  padding:2rem;text-align:center;position:relative;overflow:hidden;
+}
+.bachelor-inner::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L35 20H50L38 30L42 45L30 35L18 45L22 30L10 20H25Z' fill='rgba(212,168,83,0.03)'/%3E%3C/svg%3E");
+}
+.bachelor-emoji{font-size:2.5rem;position:relative;z-index:1;margin-bottom:0.5rem;}
+.bachelor-title{
+  font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,4vw,2rem);
+  letter-spacing:0.08em;color:var(--gold);position:relative;z-index:1;
+}
+.bachelor-sub{
+  font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1;
+  margin-top:0.3rem;font-weight:300;
+}
 
-  .spot-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.8rem;
-    margin-bottom: 0.5rem;
-  }
-  .spot-time {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent);
-    white-space: nowrap;
-    padding: 0.2rem 0.6rem;
-    background: rgba(255,107,53,0.1);
-    border-radius: 6px;
-    flex-shrink: 0;
-  }
-  .day-2 .spot-time { color: var(--accent3); background: rgba(6,214,160,0.1); }
-  .day-3 .spot-time { color: var(--accent2); background: rgba(255,209,102,0.1); }
-  .day-4 .spot-time { color: #a078ff; background: rgba(160,120,255,0.1); }
+/* ===== RULES ===== */
+.rules-list{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem;
+}
+.rule-item{
+  display:flex;align-items:flex-start;gap:0.8rem;
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:1rem 1.2rem;transition:border-color 0.3s;
+}
+.rule-item:hover{border-color:var(--gold-border);}
+.rule-num{
+  font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--gold);
+  flex-shrink:0;line-height:1;padding-top:2px;
+}
+.rule-text{font-size:0.85rem;font-weight:400;line-height:1.5;}
 
-  .spot-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    flex: 1;
-  }
-  .spot-category {
-    display: inline-block;
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    background: var(--glass);
-    padding: 0.15rem 0.5rem;
-    border-radius: 4px;
-    margin-top: 0.2rem;
-  }
-  .spot-note {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    font-weight: 300;
-    margin-top: 0.4rem;
-    line-height: 1.5;
-  }
-  .spot-actions {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.8rem;
-    flex-wrap: wrap;
-  }
-  .map-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.75rem;
-    color: var(--accent3);
-    text-decoration: none;
-    padding: 0.3rem 0.7rem;
-    background: rgba(6,214,160,0.08);
-    border: 1px solid rgba(6,214,160,0.2);
-    border-radius: 8px;
-    transition: all 0.2s;
-  }
-  .map-link:hover {
-    background: rgba(6,214,160,0.15);
-    border-color: rgba(6,214,160,0.4);
-  }
+/* ===== DAY NAV ===== */
+.day-nav-bar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(6,6,11,0.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;justify-content:center;gap:0.5rem;
+  padding:0.8rem 1rem;
+}
+.day-nav-btn{
+  padding:0.4rem 1.2rem;border-radius:100px;font-size:0.75rem;font-weight:700;
+  text-decoration:none;color:var(--text-dim);background:transparent;
+  border:1px solid transparent;transition:all 0.3s;cursor:pointer;
+  font-family:'Noto Sans KR',sans-serif;
+}
+.day-nav-btn:hover,.day-nav-btn.active{
+  color:var(--gold);border-color:var(--gold-border);background:var(--gold-dim);
+}
 
-  /* Tips section */
-  .tips-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-  }
-  .tips-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent2);
-  }
-  .tips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-  }
-  .tip-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.2rem;
-  }
-  .tip-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
-  .tip-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; }
-  .tip-text { font-size: 0.8rem; color: var(--text-dim); font-weight: 300; line-height: 1.5; }
+/* ===== TIMELINE ===== */
+.day-section{max-width:840px;margin:0 auto;padding:2rem 1.5rem 3rem;}
+.day-header{padding:1rem 0 1.5rem;}
+.day-chip{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  padding:0.3rem 0.8rem;border-radius:100px;
+  font-size:0.7rem;font-weight:700;letter-spacing:0.06em;
+  margin-bottom:0.6rem;
+}
+.d1 .day-chip{background:rgba(255,107,53,0.12);color:#ff6b35;border:1px solid rgba(255,107,53,0.25);}
+.d2 .day-chip{background:rgba(6,214,160,0.12);color:var(--green);border:1px solid rgba(6,214,160,0.25);}
+.d3 .day-chip{background:rgba(212,168,83,0.12);color:var(--gold);border:1px solid var(--gold-border);}
+.d4 .day-chip{background:rgba(160,120,255,0.12);color:var(--purple);border:1px solid rgba(160,120,255,0.25);}
+.day-h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2rem);font-weight:700;margin-bottom:0.2rem;}
+.day-desc{color:var(--text-dim);font-size:0.85rem;font-weight:300;}
 
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 3rem 1.5rem;
-    color: var(--text-dim);
-    font-size: 0.8rem;
-    border-top: 1px solid var(--border);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .footer-heart { color: var(--accent); }
+.tl{position:relative;padding-left:2rem;}
+.tl::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--border);}
+.tl-item{position:relative;margin-bottom:1.2rem;}
+.tl-dot{
+  position:absolute;left:-2rem;top:1.2rem;width:14px;height:14px;
+  border-radius:50%;border:3px solid var(--gold);background:var(--bg);z-index:1;
+}
+.d1 .tl-dot{border-color:#ff6b35;}
+.d2 .tl-dot{border-color:var(--green);}
+.d3 .tl-dot{border-color:var(--gold);}
+.d4 .tl-dot{border-color:var(--purple);}
 
-  /* Day nav */
-  .day-nav {
-    position: fixed;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .day-nav a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--text-dim);
-    background: var(--card);
-    border: 1px solid var(--border);
-    transition: all 0.3s;
-  }
-  .day-nav a:hover, .day-nav a.active {
-    color: var(--bg);
-    background: var(--accent2);
-    border-color: var(--accent2);
-  }
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:1.1rem 1.3rem;transition:all 0.3s;
+}
+.card:hover{background:var(--card2);transform:translateX(3px);}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:0.6rem;margin-bottom:0.3rem;}
+.card-name{font-size:1rem;font-weight:700;flex:1;}
+.card-time{
+  font-size:0.7rem;font-weight:700;white-space:nowrap;
+  padding:0.15rem 0.5rem;border-radius:6px;flex-shrink:0;
+}
+.d1 .card-time{color:#ff6b35;background:rgba(255,107,53,0.1);}
+.d2 .card-time{color:var(--green);background:rgba(6,214,160,0.1);}
+.d3 .card-time{color:var(--gold);background:var(--gold-dim);}
+.d4 .card-time{color:var(--purple);background:rgba(160,120,255,0.1);}
+.card-cat{font-size:0.65rem;color:var(--text-dim);background:var(--glass);padding:0.1rem 0.4rem;border-radius:4px;display:inline-block;margin-top:0.15rem;}
+.card-note{font-size:0.82rem;color:var(--text-dim);font-weight:300;margin-top:0.35rem;line-height:1.5;}
+.card-note strong{color:var(--text);font-weight:600;}
+.card-actions{display:flex;gap:0.4rem;margin-top:0.6rem;flex-wrap:wrap;}
+.map-btn{
+  display:inline-flex;align-items:center;gap:0.25rem;font-size:0.7rem;
+  color:var(--green);text-decoration:none;padding:0.25rem 0.6rem;
+  background:rgba(6,214,160,0.06);border:1px solid rgba(6,214,160,0.15);
+  border-radius:8px;transition:all 0.2s;
+}
+.map-btn:hover{background:rgba(6,214,160,0.12);border-color:rgba(6,214,160,0.3);}
+.warn{
+  display:inline-flex;align-items:center;gap:0.2rem;font-size:0.65rem;
+  color:#ff6b6b;padding:0.15rem 0.5rem;background:rgba(255,107,107,0.08);
+  border:1px solid rgba(255,107,107,0.15);border-radius:6px;
+}
 
-  @media (max-width: 600px) {
-    .day-nav { display: none; }
-    .hero-meta { gap: 0.8rem; }
-    .hero-meta-item { padding: 0.6rem 1rem; }
-    .timeline { padding-left: 1.5rem; }
-    .spot-card { padding: 1rem; }
-  }
+/* ===== SPECIAL: CASINO ===== */
+.casino-card{
+  background:linear-gradient(135deg,rgba(212,168,83,0.06),rgba(192,57,43,0.04));
+  border:1px solid var(--gold-border);
+}
+.casino-card:hover{border-color:var(--gold);}
 
-  /* Warning */
-  .warning-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.7rem;
-    color: #ff6b6b;
-    padding: 0.2rem 0.5rem;
-    background: rgba(255,107,107,0.1);
-    border: 1px solid rgba(255,107,107,0.2);
-    border-radius: 6px;
-  }
+/* ===== HOTEL ===== */
+.hotel-section{
+  max-width:840px;margin:0 auto;padding:1rem 1.5rem 2rem;
+}
+.hotel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;}
+.hotel-card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:1.3rem;
+}
+.hotel-card .label{font-size:0.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;}
+.hotel-card .name{font-weight:700;font-size:1rem;margin-bottom:0.3rem;}
+.hotel-card .addr{font-size:0.8rem;color:var(--text-dim);font-weight:300;}
+
+/* ===== TIPS ===== */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.8rem;}
+.tip{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.1rem;
+}
+.tip-icon{font-size:1.4rem;margin-bottom:0.4rem;}
+.tip-t{font-weight:700;font-size:0.85rem;margin-bottom:0.2rem;}
+.tip-d{font-size:0.78rem;color:var(--text-dim);font-weight:300;line-height:1.5;}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;padding:3rem 1.5rem;max-width:840px;margin:0 auto;
+  border-top:1px solid var(--border);
+}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold);letter-spacing:0.1em;}
+.footer-sub{font-size:0.75rem;color:var(--text-dim);margin-top:0.3rem;}
+.footer-copy{font-size:0.65rem;color:var(--text-dim);margin-top:1rem;opacity:0.5;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .hero h1{font-size:3.5rem;}
+  .hero-dates{flex-direction:column;gap:0.5rem;padding:1rem 1.5rem;}
+  .hero-dates .divider{width:40px;height:1px;}
+  .crew-grid{grid-template-columns:repeat(2,1fr);}
+  .tl{padding-left:1.5rem;}
+  .day-nav-bar{gap:0.3rem;}
+  .day-nav-btn{padding:0.3rem 0.8rem;font-size:0.7rem;}
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-in{opacity:0;transform:translateY(16px);transition:all 0.6s ease;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
 </style>
 </head>
 <body>
 
-<!-- Day Navigation -->
-<nav class="day-nav">
-  <a href="#day1" title="Day 1">D1</a>
-  <a href="#day2" title="Day 2">D2</a>
-  <a href="#day3" title="Day 3">D3</a>
-  <a href="#day4" title="Day 4">D4</a>
-</nav>
-
-<!-- Hero -->
+<!-- ========== HERO ========== -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-flags">🇲🇴 🇭🇰</div>
-    <h1>HONG KONG<br>× MACAU</h1>
-    <p class="hero-sub">맛집 · 커피 · 술 · 나이트라이프 — 남자 4인 여행</p>
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <span class="label">날짜</span>
-        <span class="value">4/2 (수) — 4/5 (토)</span>
+    <p class="hero-eyebrow">BUFB Presents</p>
+    <h1><span class="gold">HONG KONG</span><br>MACAU</h1>
+    <p class="hero-sub">"짱대의 마지막 자유, 우리의 10년을 축하하며"</p>
+    <p class="hero-tagline">맛집 · 커피 · 술 · 겜블 · 나이트라이프</p>
+    <div class="hero-dates">
+      <div style="text-align:center">
+        <span class="label">출발</span><br>
+        <span>4.02 수</span>
       </div>
-      <div class="hero-meta-item">
-        <span class="label">인원</span>
-        <span class="value">4명</span>
+      <div class="divider"></div>
+      <div style="text-align:center">
+        <span class="label">귀국</span><br>
+        <span>4.05 토</span>
       </div>
-      <div class="hero-meta-item">
-        <span class="label">숙박</span>
-        <span class="value">마카오 1박 + 홍콩 2박</span>
+      <div class="divider"></div>
+      <div style="text-align:center">
+        <span class="label">일정</span><br>
+        <span>3박 4일</span>
       </div>
     </div>
   </div>
-  <div class="scroll-hint">↓ 스크롤하여 일정 보기</div>
+  <div class="scroll-cta">↓ scroll ↓</div>
 </section>
 
+<!-- ========== CREW ========== -->
+<section class="section fade-in">
+  <p class="section-label">The Crew</p>
+  <h2 class="section-title">BUFB — 10년의 브라더스</h2>
+  <div class="crew-grid">
+    <div class="crew-card">
+      <div class="crew-emoji">🦊</div>
+      <div class="crew-name">톰</div>
+      <div class="crew-role">The Planner</div>
+      <div class="crew-badge">총괄 기획</div>
+    </div>
+    <div class="crew-card">
+      <div class="crew-emoji">🐺</div>
+      <div class="crew-name">제리</div>
+      <div class="crew-role">The Wildcard</div>
+      <div class="crew-badge">분위기 메이커</div>
+    </div>
+    <div class="crew-card groom">
+      <div class="crew-emoji">🦁</div>
+      <div class="crew-name">짱대</div>
+      <div class="crew-role">The Groom-to-be</div>
+      <div class="crew-badge">👰 예비 신랑</div>
+    </div>
+    <div class="crew-card">
+      <div class="crew-emoji">🦅</div>
+      <div class="crew-name">필립</div>
+      <div class="crew-role">The Silent Killer</div>
+      <div class="crew-badge">카지노 담당</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BACHELOR BANNER ========== -->
+<div class="bachelor-banner fade-in">
+  <div class="bachelor-inner">
+    <div class="bachelor-emoji">🎰🥂🔥</div>
+    <div class="bachelor-title">짱대의 LAST RIDE</div>
+    <p class="bachelor-sub">대학교 때부터 10년 — 결혼 전 마지막 남자들의 여행.<br>이번엔 제대로 간다.</p>
+  </div>
+</div>
+
+<!-- ========== GROUND RULES ========== -->
+<section class="section fade-in">
+  <p class="section-label">Ground Rules</p>
+  <h2 class="section-title">BUFB 여행 헌법</h2>
+  <div class="rules-list">
+    <div class="rule-item">
+      <div class="rule-num">01</div>
+      <div class="rule-text">짱대에게는 거부권이 없다. 우리가 시키면 한다.</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">02</div>
+      <div class="rule-text">카지노 리밋은 각자 정해오기. 잃어도 울지 않는다.</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">03</div>
+      <div class="rule-text">아침에 먼저 일어난 사람이 커피 사온다.</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">04</div>
+      <div class="rule-text">여행 중 찍은 사진은 SNS 업로드 전 전원 동의.</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">05</div>
+      <div class="rule-text">마지막 날, 짱대에게 10년치 건배사를 한다.</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">06</div>
+      <div class="rule-text">What happens in HK, stays in HK.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOTEL ========== -->
+<section class="hotel-section fade-in">
+  <p class="section-label">Base Camp</p>
+  <h2 class="section-title" style="margin-bottom:1rem;">숙소</h2>
+  <div class="hotel-grid">
+    <div class="hotel-card">
+      <div class="label">🇭🇰 홍콩 (2박)</div>
+      <div class="name">완차이 숙소</div>
+      <div class="addr">269~273 Hennessy Road, Wan Chai</div>
+      <div class="card-actions" style="margin-top:0.6rem">
+        <a class="map-btn" href="https://maps.google.com/?q=269+Hennessy+Road+Wan+Chai+Hong+Kong" target="_blank">📍 구글맵</a>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="label">🇲🇴 마카오 (1박)</div>
+      <div class="name">미정</div>
+      <div class="addr">확정되면 업데이트 예정</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DAY NAV ========== -->
+<nav class="day-nav-bar" id="dayNav">
+  <button class="day-nav-btn" onclick="scrollTo('day1')">Day 1 · 마카오</button>
+  <button class="day-nav-btn" onclick="scrollTo('day2')">Day 2 · 이동</button>
+  <button class="day-nav-btn" onclick="scrollTo('day3')">Day 3 · 홍콩</button>
+  <button class="day-nav-btn" onclick="scrollTo('day4')">Day 4 · 출발</button>
+</nav>
+
+<!-- ===================================================================== -->
 <!-- DAY 1 -->
-<section class="day-section day-1" id="day1">
+<!-- ===================================================================== -->
+<section class="day-section d1" id="day1">
   <div class="day-header">
-    <div class="day-badge">🇲🇴 Day 1 · 4월 2일 (수)</div>
-    <h2 class="day-title">마카오 도착 — 포르투갈 감성</h2>
-    <p class="day-narrative">세나도 광장 산책 → 에그타르트 → 타이파 디너 → 루프탑 바</p>
+    <div class="day-chip">🇲🇴 DAY 1 · 4월 2일 (수)</div>
+    <h2 class="day-h2">마카오 상륙 — 포르투갈 × 카지노</h2>
+    <p class="day-desc">세나도 광장 산책 → 에그타르트 → 포르투갈 디너 → 카지노 겜블 → 루프탑 바</p>
   </div>
+  <div class="tl">
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🏛 세나도 광장 (Senado Square)</div>
-            <span class="spot-category">관광 · 산책</span>
-          </div>
-          <div class="spot-time">3:00 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🏛 세나도 광장</div><span class="card-cat">관광 · 산책</span></div>
+          <div class="card-time">3:00 PM</div>
         </div>
-        <p class="spot-note">도착 후 첫 산책 코스. 포르투갈풍 건축물과 모자이크 거리가 인상적. 주변에 육포 시식 거리 많음</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Senado+Square+Macau" target="_blank">📍 구글맵</a>
+        <p class="card-note">도착 후 첫 산책. 포르투갈 건축물 + 모자이크 거리. 육포 시식 거리에서 간식 해결</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Senado+Square+Macau" target="_blank">📍 구글맵</a></div>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🥚 Margaret's Café e Nata</div><span class="card-cat">에그타르트 · 디저트</span></div>
+          <div class="card-time">3:40 PM</div>
+        </div>
+        <p class="card-note">마카오 대표 에그타르트. 현금만 가능(HKD OK). 갓 나온 거 바로 먹어야 함</p>
+        <div class="card-actions">
+          <a class="map-btn" href="https://maps.google.com/?q=Margaret's+Cafe+e+Nata+Macau" target="_blank">📍 구글맵</a>
+          <span class="warn">⚠️ 수요일 휴무! → Koi Kei 대체</span>
         </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🥚 Margaret's Café e Nata</div>
-            <span class="spot-category">에그타르트 · 디저트</span>
-          </div>
-          <div class="spot-time">3:40 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">⛪ 성바오로 성당 유적</div><span class="card-cat">관광 · 포토스팟</span></div>
+          <div class="card-time">4:00 PM</div>
         </div>
-        <p class="spot-note">마카오 대표 에그타르트! 현금만 가능, HKD 결제 가능하지만 큰 돈 거스름돈 없음</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Margaret's+Cafe+e+Nata+Macau" target="_blank">📍 구글맵</a>
-          <span class="warning-badge">⚠️ 수요일 휴무 — Koi Kei로 대체!</span>
+        <p class="card-note">마카오 랜드마크. BUFB 단체사진 여기서 찍기. 주변 스트릿푸드 시식 많음</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Ruins+of+St+Paul's+Macau" target="_blank">📍 구글맵</a></div>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🍷 António (포르투갈 디너)</div><span class="card-cat">레스토랑 · $$$</span></div>
+          <div class="card-time">6:30 PM</div>
+        </div>
+        <p class="card-note">타이파빌리지 대표 포르투갈식. 새끼돼지구이 · 클램 · 대구구이 추천. <strong>예약 필수!</strong></p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Antonio+Restaurant+Taipa+Macau" target="_blank">📍 구글맵</a></div>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card casino-card">
+        <div class="card-top">
+          <div><div class="card-name">🎰 카지노 타임</div><span class="card-cat">겜블 · 나이트라이프</span></div>
+          <div class="card-time">9:00 PM</div>
+        </div>
+        <p class="card-note">짱대의 마지막 자유를 카지노에서 태운다. <strong>Grand Lisboa</strong> 또는 <strong>Venetian</strong> 추천. 바카라/블랙잭 테이블에서 승부. 각자 리밋 정하고 올인 금지. 필립은 이미 몸이 달아있다</p>
+        <div class="card-actions">
+          <a class="map-btn" href="https://maps.google.com/?q=Grand+Lisboa+Macau" target="_blank">📍 Grand Lisboa</a>
+          <a class="map-btn" href="https://maps.google.com/?q=The+Venetian+Macao" target="_blank">📍 Venetian</a>
         </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">⛪ 성바오로 성당 (Ruins of St. Paul's)</div>
-            <span class="spot-category">관광 · 포토스팟</span>
-          </div>
-          <div class="spot-time">4:00 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🌃 SKY 21 루프탑</div><span class="card-cat">바 · 야경 · $$$</span></div>
+          <div class="card-time">11:30 PM</div>
         </div>
-        <p class="spot-note">마카오 대표 랜드마크. 사진 찍고 주변 스트릿푸드 즐기기. 육포/아몬드쿠키 시식거리 많음</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Ruins+of+St+Paul's+Macau" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">카지노 후 루프탑에서 정산 겸 칵테일. 마카오 야경 내려보며 회고. 새벽 3시까지 영업</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=SKY+21+Macau" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🍷 António (포르투갈 디너)</div>
-            <span class="spot-category">레스토랑 · 포르투갈식 · $$$</span>
-          </div>
-          <div class="spot-time">6:30 PM</div>
-        </div>
-        <p class="spot-note">타이파빌리지 대표 포르투갈 레스토랑. 새끼돼지구이, 클램, 대구구이 추천. <strong>예약 필수!</strong></p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Antonio+Restaurant+Taipa+Macau" target="_blank">📍 구글맵</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🍺 Old Taipa Tavern (OTT)</div>
-            <span class="spot-category">바 · 크래프트맥주 · $$</span>
-          </div>
-          <div class="spot-time">8:15 PM</div>
-        </div>
-        <p class="spot-note">호주/뉴질랜드 바이브 펍. 크래프트맥주 종류 다양, 외국인 많아서 분위기 좋음. 스포츠 경기도 틀어줌</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Old+Taipa+Tavern+Macau" target="_blank">📍 구글맵</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🌃 SKY 21 (루프탑 바)</div>
-            <span class="spot-category">바 · 루프탑 · 야경 · $$$</span>
-          </div>
-          <div class="spot-time">9:30 PM</div>
-        </div>
-        <p class="spot-note">마카오 시내 야경 내려보며 칵테일. 루프탑 덱 자리 추천. 시샤도 가능. 새벽 3시까지 영업</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=SKY+21+Macau" target="_blank">📍 구글맵</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🍸 Vida Rica Bar (만다린오리엔탈)</div>
-            <span class="spot-category">칵테일바 · 럭셔리 · $$$</span>
-          </div>
-          <div class="spot-time">11:00 PM</div>
-        </div>
-        <p class="spot-note">마카오 최고급 칵테일 바 (평점 4.8). 항구 뷰 + 고급스러운 분위기. 금/토 새벽 1시까지</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Vida+Rica+Bar+Mandarin+Oriental+Macau" target="_blank">📍 구글맵</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
+<!-- ===================================================================== -->
 <!-- DAY 2 -->
-<section class="day-section day-2" id="day2">
+<!-- ===================================================================== -->
+<section class="day-section d2" id="day2">
   <div class="day-header">
-    <div class="day-badge">🇲🇴→🇭🇰 Day 2 · 4월 3일 (목)</div>
-    <h2 class="day-title">마카오→홍콩 — 딤섬 + LKF</h2>
-    <p class="day-narrative">페리로 홍콩 이동 → 올드스쿨 딤섬 → 커피 → Mott 32 디너 → LKF 올인</p>
+    <div class="day-chip">🇲🇴→🇭🇰 DAY 2 · 4월 3일 (목)</div>
+    <h2 class="day-h2">홍콩 진입 — 딤섬 × LKF 클럽</h2>
+    <p class="day-desc">페리로 홍콩 이동 → 올드스쿨 딤섬 → 커피 → Mott 32 → LKF 올인</p>
   </div>
+  <div class="tl">
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🥟 Lin Heung Lau (蓮香樓)</div>
-            <span class="spot-category">딤섬 · 올드스쿨 · $$</span>
-          </div>
-          <div class="spot-time">1:00 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">⛴ 마카오→홍콩 페리</div><span class="card-cat">이동 · 터보젯</span></div>
+          <div class="card-time">10:00 AM</div>
         </div>
-        <p class="spot-note">100년 전통 딤섬집. 카트에서 직접 골라먹는 옛날 스타일. 로컬 어르신들 사이에서 즐기는 찐 홍콩 경험. 대기 있을 수 있음</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Lin+Heung+Lau+Wellington+Street+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">터보젯 페리 약 1시간. 편도 HKD 170~. 미리 온라인 예약 추천. 숙소 체크인 후 출발</p>
+        <div class="card-actions"><a class="map-btn" href="https://www.turbojet.com.hk" target="_blank">🔗 터보젯 예약</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">☕ The Cupping Room (셩완)</div>
-            <span class="spot-category">스페셜티 커피 · 로스터리</span>
-          </div>
-          <div class="spot-time">2:30 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🥟 Lin Heung Lau (蓮香樓)</div><span class="card-cat">딤섬 · 올드스쿨 · $$</span></div>
+          <div class="card-time">1:00 PM</div>
         </div>
-        <p class="spot-note">홍콩 스페셜티 커피 선구자. 바리스타 챔피언 배출한 로스터리. 코르타도 추천</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Cupping+Room+Sheung+Wan+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">100년 전통 딤섬집. 카트에서 직접 골라먹는 스타일. 로컬 아저씨들 사이에서 찐 홍콩 체험. 대기 있을 수 있음</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Lin+Heung+Lau+Wellington+Street+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🥢 Mott 32 (프리미엄 중식)</div>
-            <span class="spot-category">모던 차이니즈 · 미쉐린급 · $$$$</span>
-          </div>
-          <div class="spot-time">7:00 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">☕ The Cupping Room</div><span class="card-cat">스페셜티 커피</span></div>
+          <div class="card-time">2:30 PM</div>
         </div>
-        <p class="spot-note">홍콩 최고 모던 중식 레스토랑. 사과나무 훈연 오리, 이베리코 차슈, 트러플 슈마이 필수. <strong>예약 필수!</strong> 바 칵테일도 수준급</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Mott+32+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">홍콩 스페셜티 커피 개척자. 바리스타 챔피언 배출한 로스터리. 코르타도 추천</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Cupping+Room+Sheung+Wan+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🍻 란콰이퐁 (LKF) 바거리</div>
-            <span class="spot-category">나이트라이프 · 바호핑</span>
-          </div>
-          <div class="spot-time">9:30 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🥢 Mott 32 (프리미엄 디너)</div><span class="card-cat">모던 차이니즈 · $$$$</span></div>
+          <div class="card-time">7:00 PM</div>
         </div>
-        <p class="spot-note">홍콩 나이트라이프의 심장. 10시부터 거리에 사람 넘침. 7-Eleven 프리게임 후 바호핑 시작 (길거리 음주 합법!)</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Lan+Kwai+Fong+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">홍콩 최고 모던 중식. 사과나무 훈연 오리 · 이베리코 차슈 · 트러플 슈마이. <strong>예약 필수!</strong> 바 칵테일도 수준급 — 짱대 축하 건배 여기서</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Mott+32+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🎶 Dragon-i (클럽)</div>
-            <span class="spot-category">클럽 · 프리미엄 · $$$$</span>
-          </div>
-          <div class="spot-time">11:30 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🍻 란콰이퐁 (LKF) 바호핑</div><span class="card-cat">나이트라이프</span></div>
+          <div class="card-time">9:30 PM</div>
         </div>
-        <p class="spot-note">LKF 최고 프리미엄 클럽. 셀럽들이 자주 오는 곳. 드레스코드 신경쓸 것. 금/토 새벽 4시까지. 런치타임 딤섬 뷔페도 유명</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Dragon-i+Wyndham+Street+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">홍콩 나이트라이프의 심장. 7-Eleven 프리게임 후 바호핑 시작 (길거리 음주 합법!). 10시부터 거리가 터짐</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Lan+Kwai+Fong+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
+
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🎶 Dragon-i (클럽)</div><span class="card-cat">프리미엄 클럽 · $$$$</span></div>
+          <div class="card-time">11:30 PM</div>
+        </div>
+        <p class="card-note">LKF 탑티어 클럽. 셀럽 단골. 드레스코드 신경쓸 것 (슬리퍼/반바지 NO). 금토 새벽 4시까지. 일요일 휴무</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Dragon-i+Wyndham+Street+Hong+Kong" target="_blank">📍 구글맵</a></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<!-- ===================================================================== -->
 <!-- DAY 3 -->
-<section class="day-section day-3" id="day3">
+<!-- ===================================================================== -->
+<section class="day-section d3" id="day3">
   <div class="day-header">
-    <div class="day-badge">🇭🇰 Day 3 · 4월 4일 (금)</div>
-    <h2 class="day-title">홍콩 풀데이 — 스테이크 + 완차이</h2>
-    <p class="day-narrative">딤섬 브런치 → 커피 → 야시장 해산물 → 스테이크 → 완차이 클럽 🔥</p>
+    <div class="day-chip">🇭🇰 DAY 3 · 4월 4일 (금) 🔥</div>
+    <h2 class="day-h2">홍콩 풀데이 — 스테이크 × 완차이</h2>
+    <p class="day-desc">딤섬 브런치 → 커피 → 야시장 해산물 → 루프탑 스테이크 → 완차이 올나잇</p>
   </div>
+  <div class="tl">
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🥟 Tim Ho Wan (딤섬 브런치)</div>
-            <span class="spot-category">미쉐린 딤섬 · $</span>
-          </div>
-          <div class="spot-time">10:00 AM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🥟 Tim Ho Wan (브런치)</div><span class="card-cat">미쉐린 딤섬 · $</span></div>
+          <div class="card-time">10:00 AM</div>
         </div>
-        <p class="spot-note">미쉐린 딤섬의 대명사. 차슈빵, 새우교자 필수. 비교적 저렴하게 미쉐린 경험 가능. 대기 30~40분 예상</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Tim+Ho+Wan+Central+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">미쉐린 딤섬 대명사. 차슈빵 · 새우교자 필수. 저렴하게 미쉐린 경험. 대기 30~40분</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Tim+Ho+Wan+Central+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">☕ NOC Coffee (셩완)</div>
-            <span class="spot-category">로컬 카페 · 스페셜티</span>
-          </div>
-          <div class="spot-time">11:00 AM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">☕ NOC Coffee</div><span class="card-cat">로컬 카페 · 스페셜티</span></div>
+          <div class="card-time">11:00 AM</div>
         </div>
-        <p class="spot-note">홍콩 로컬 인기 카페 체인. 깔끔한 인테리어, 커피 퀄리티 좋음. 셩완 지점 추천</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=NOC+Coffee+Sheung+Wan+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">홍콩 로컬 인기 카페. 깔끔한 인테리어 + 커피 퀄리티. 전날 숙취 해소용</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=NOC+Coffee+Sheung+Wan+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🦐 템플스트릿 야시장 (해산물)</div>
-            <span class="spot-category">야시장 · 해산물포장마차 · $$</span>
-          </div>
-          <div class="spot-time">5:00 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🦐 템플스트릿 야시장</div><span class="card-cat">야시장 · 해산물포장마차 · $$</span></div>
+          <div class="card-time">5:00 PM</div>
         </div>
-        <p class="spot-note">구룡 대표 야시장. 해산물 포장마차에서 조개·새우·게 구이 추천. 흥정 필수! 기념품 쇼핑도 가능</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Temple+Street+Night+Market+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">구룡 대표 야시장. 해산물 포장마차에서 조개·새우·게 굽기. 흥정 필수! 로컬 맥주랑 같이</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Temple+Street+Night+Market+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🥩 Wooloomooloo Steakhouse</div>
-            <span class="spot-category">스테이크 · 루프탑 · $$$</span>
-          </div>
-          <div class="spot-time">7:30 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🥩 Wooloomooloo Steakhouse</div><span class="card-cat">루프탑 스테이크 · $$$</span></div>
+          <div class="card-time">7:30 PM</div>
         </div>
-        <p class="spot-note">31층 루프탑 스테이크하우스. 홍콩 야경 보면서 고기 굽기. 로시니 필레 추천. 뷰가 미쳤음</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Wooloomooloo+Steakhouse+Wan+Chai" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">31층 루프탑 스테이크하우스. 홍콩 야경 보면서 고기 굽기. 로시니 필레 추천. <strong>숙소에서 도보 5분!</strong></p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Wooloomooloo+Steakhouse+Wan+Chai" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🔥 Embassy Nightclub (완차이)</div>
-            <span class="spot-category">클럽 · 라이브 · 나이트라이프 · $$</span>
-          </div>
-          <div class="spot-time">10:30 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🔥 Embassy Nightclub (완차이)</div><span class="card-cat">클럽 · 라이브 · $$</span></div>
+          <div class="card-time">10:30 PM</div>
         </div>
-        <p class="spot-note">완차이 최대 클럽. 3개 룸, 라이브밴드+DJ. 새벽 4시까지. <strong>금요일 밤 = 최고의 타이밍!</strong> 완차이 바거리의 시작점</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Embassy+Nightclub+Wan+Chai+Hong+Kong" target="_blank">📍 구글맵</a>
-        </div>
+        <p class="card-note">완차이 최대 클럽. 3개 룸 + 라이브밴드 + DJ. 새벽 4시까지. <strong>금요일 밤 = 최고의 밤. 숙소에서 걸어서 3분.</strong> 완차이 Lockhart Road 바거리가 진짜 시작점</p>
+        <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Embassy+Nightclub+Wan+Chai+Hong+Kong" target="_blank">📍 구글맵</a></div>
       </div>
     </div>
+
   </div>
 </section>
 
+<!-- ===================================================================== -->
 <!-- DAY 4 -->
-<section class="day-section day-4" id="day4">
+<!-- ===================================================================== -->
+<section class="day-section d4" id="day4">
   <div class="day-header">
-    <div class="day-badge">🇭🇰 Day 4 · 4월 5일 (토)</div>
-    <h2 class="day-title">마지막 날 — 브런치 + 루프탑</h2>
-    <p class="day-narrative">여유롭게 브런치 → Sugar 루프탑에서 마지막 뷰 → 공항</p>
+    <div class="day-chip">🇭🇰 DAY 4 · 4월 5일 (토)</div>
+    <h2 class="day-h2">마지막 — 브런치 + 건배</h2>
+    <p class="day-desc">여유로운 아침 → 딤섬 브런치 → 마지막 커피 → 공항</p>
   </div>
+  <div class="tl">
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🥟 딤섬 브런치</div>
-            <span class="spot-category">브런치 · 딤섬 · $~$$</span>
-          </div>
-          <div class="spot-time">10:30 AM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🥟 딤섬 브런치</div><span class="card-cat">브런치 · $~$$</span></div>
+          <div class="card-time">10:30 AM</div>
         </div>
-        <p class="spot-note">못 먹은 메뉴 도전! Tim Ho Wan 재방문 또는 Yum Cha (인스타 감성 딤섬) 등 새로운 곳 도전</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Tim+Ho+Wan+Central+Hong+Kong" target="_blank">📍 Tim Ho Wan</a>
-          <a class="map-link" href="https://maps.google.com/?q=Yum+Cha+Central+Hong+Kong" target="_blank">📍 Yum Cha</a>
+        <p class="card-note">Tim Ho Wan 재방문 or Yum Cha (인스타 감성 딤섬) 도전. 못 먹은 메뉴 클리어</p>
+        <div class="card-actions">
+          <a class="map-btn" href="https://maps.google.com/?q=Tim+Ho+Wan+Central+Hong+Kong" target="_blank">📍 Tim Ho Wan</a>
+          <a class="map-btn" href="https://maps.google.com/?q=Yum+Cha+Central+Hong+Kong" target="_blank">📍 Yum Cha</a>
         </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="spot-card">
-        <div class="spot-top">
-          <div>
-            <div class="spot-name">🌅 Sugar (EAST 루프탑 바)</div>
-            <span class="spot-category">루프탑 · 칵테일 · 뷰 · $$</span>
-          </div>
-          <div class="spot-time">12:00 PM</div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">🍸 짱대에게 건배</div><span class="card-cat">BUFB 세레모니</span></div>
+          <div class="card-time">12:00 PM</div>
         </div>
-        <p class="spot-note">빅토리아하버 뷰 최고의 루프탑. 낮술 한잔하며 여행 마무리. 시그니처 칵테일 + 그린 테라스가 포인트. 토요일은 5:30PM 오픈이니 시간 체크!</p>
-        <div class="spot-actions">
-          <a class="map-link" href="https://maps.google.com/?q=Sugar+Bar+EAST+Hong+Kong" target="_blank">📍 구글맵</a>
-          <span class="warning-badge">⚠️ 토요일 5:30PM 오픈 — 일정 조정 필요</span>
-        </div>
+        <p class="card-note">마지막 식사 후, 4명이 둘러앉아 짱대에게 10년치 건배사. 결혼 축하 + BUFB 우정 확인. 이 순간이 이 여행의 진짜 목적이다.</p>
       </div>
     </div>
+
+    <div class="tl-item fade-in"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div><div class="card-name">✈️ 공항 이동</div><span class="card-cat">귀국</span></div>
+          <div class="card-time">1:30 PM</div>
+        </div>
+        <p class="card-note">완차이에서 공항까지 택시 약 30분 or Airport Express (홍콩역→공항 24분). 오후 비행기에 맞춰 출발</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- Tips -->
-<section class="tips-section">
-  <h2 class="tips-title">💡 꿀팁 모음</h2>
+<!-- ========== TIPS ========== -->
+<section class="section fade-in">
+  <p class="section-label">Survival Guide</p>
+  <h2 class="section-title">꿀팁 모음</h2>
   <div class="tips-grid">
-    <div class="tip-card">
+    <div class="tip">
       <div class="tip-icon">🎟</div>
-      <div class="tip-title">예약 필수</div>
-      <div class="tip-text">Mott 32, António은 미리 예약 안 하면 못 들어감. 최소 1주 전에 예약할 것</div>
+      <div class="tip-t">예약 필수</div>
+      <div class="tip-d">Mott 32, António 미리 예약. 최소 1주 전. 안 하면 못 들어감</div>
     </div>
-    <div class="tip-card">
+    <div class="tip">
       <div class="tip-icon">🍺</div>
-      <div class="tip-title">LKF 프리게임</div>
-      <div class="tip-text">7-Eleven에서 미리 마시고 시작 (길거리 음주 합법). 바 칵테일 HKD 140~200 (₩24,000~34,000)</div>
+      <div class="tip-t">LKF 프리게임</div>
+      <div class="tip-d">7-Eleven 프리게임 후 바호핑 (길거리 음주 합법). 바 칵테일 HKD 140~200</div>
     </div>
-    <div class="tip-card">
+    <div class="tip">
       <div class="tip-icon">⛴</div>
-      <div class="tip-title">마카오→홍콩</div>
-      <div class="tip-text">터보젯 페리 추천 (약 1시간). 편도 HKD 170~. 미리 온라인 예약하면 편함</div>
+      <div class="tip-t">마카오→홍콩</div>
+      <div class="tip-d">터보젯 페리 약 1시간. 편도 HKD 170~. 온라인 사전 예약 추천</div>
     </div>
-    <div class="tip-card">
+    <div class="tip">
       <div class="tip-icon">🚕</div>
-      <div class="tip-title">교통</div>
-      <div class="tip-text">홍콩 택시비 저렴. 밤에는 택시 이동이 효율적. 옥토퍼스카드 필수 (지하철/버스/편의점)</div>
+      <div class="tip-t">야간 이동</div>
+      <div class="tip-d">홍콩 택시비 저렴. 밤에는 택시가 효율적. 옥토퍼스카드 필수 (지하철/버스/편의점)</div>
     </div>
-    <div class="tip-card">
+    <div class="tip">
       <div class="tip-icon">👔</div>
-      <div class="tip-title">드레스코드</div>
-      <div class="tip-text">Dragon-i 등 프리미엄 클럽은 슬리퍼/반바지 NO. 스마트캐주얼 이상 준비</div>
+      <div class="tip-t">드레스코드</div>
+      <div class="tip-d">Dragon-i 등 프리미엄 클럽은 슬리퍼/반바지 NO. 스마트캐주얼 이상</div>
     </div>
-    <div class="tip-card">
-      <div class="tip-icon">🔥</div>
-      <div class="tip-title">금요일 밤</div>
-      <div class="tip-text">금요일 밤이 나이트라이프 최고 타이밍. 완차이 Lockhart Road 바거리 + Embassy 풀코스</div>
+    <div class="tip">
+      <div class="tip-icon">🎰</div>
+      <div class="tip-t">카지노 팁</div>
+      <div class="tip-d">Grand Lisboa = 로컬 분위기, Venetian = 리조트 분위기. 여권 필수 지참</div>
+    </div>
+    <div class="tip">
+      <div class="tip-icon">🏨</div>
+      <div class="tip-t">완차이 숙소 위치</div>
+      <div class="tip-d">Wooloomooloo 도보 5분, Embassy 도보 3분, LKF 택시 10분. 최적의 입지</div>
+    </div>
+    <div class="tip">
+      <div class="tip-icon">💰</div>
+      <div class="tip-t">환율/결제</div>
+      <div class="tip-d">HKD ≈ KRW 185~190. 카드 대부분 가능. 현금은 소액만 준비 (마카오 에그타르트 등)</div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- ========== FOOTER ========== -->
 <footer class="footer">
-  <p>Made with <span class="footer-heart">♥</span> for the boys</p>
-  <p style="margin-top:0.5rem; font-size:0.7rem; opacity:0.5">홍콩+마카오 2025.04.02 — 04.05</p>
+  <div class="footer-logo">B U F B</div>
+  <div class="footer-sub">톰 · 제리 · 짱대 · 필립<br>10년의 우정, 짱대의 마지막 자유, 그리고 홍콩의 밤.</div>
+  <div class="footer-copy">HONG KONG × MACAU · 2025.04.02 — 04.05 · Made with 🔥 by the boys</div>
 </footer>
 
 <script>
-  // Smooth scroll for day nav
-  document.querySelectorAll('.day-nav a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
+function scrollTo(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+// Nav active state
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      document.querySelectorAll('.day-nav-btn').forEach(b=>b.classList.remove('active'));
+      const idx=['day1','day2','day3','day4'].indexOf(e.target.id);
+      if(idx>=0)document.querySelectorAll('.day-nav-btn')[idx].classList.add('active');
+    }
   });
+},{threshold:0.2});
+document.querySelectorAll('.day-section').forEach(s=>obs.observe(s));
 
-  // Active state for day nav on scroll
-  const sections = document.querySelectorAll('.day-section');
-  const navLinks = document.querySelectorAll('.day-nav a');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const id = entry.target.id;
-        const active = document.querySelector(`.day-nav a[href="#${id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { threshold: 0.3 });
-  sections.forEach(s => observer.observe(s));
-
-  // Animate timeline items on scroll
-  const timelineItems = document.querySelectorAll('.timeline-item');
-  const itemObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
-      }
-    });
-  }, { threshold: 0.1 });
-  timelineItems.forEach(item => {
-    item.style.animationPlayState = 'paused';
-    itemObserver.observe(item);
-  });
+// Fade-in on scroll
+const fadeObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
 </script>
 </body>
 </html>
